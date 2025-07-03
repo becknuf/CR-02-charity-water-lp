@@ -1,47 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charity: Water</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
+  <!-- Header Section -->
+  <header>
+    <!-- Use the charity: water logo image instead of text -->
+    <div class="logo">
+      <img src="img/logo-nobg.png" alt="charity: water logo" style="height:40px;">
+    </div>
+    <nav>
+      <a href="#">Take Action ▾</a>
+      <a href="#">See Projects ▾</a>
+    </nav>
+    <button class="give-btn">GIVE 💧</button>
+  </header>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+  <!-- Main Content Section -->
+  <main class="hero">
+    <section class="donate">
+      <h3>From your phone to the field—real stories, real results, real water.</h3>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
+      <!-- Donation Amount Buttons -->
+      <div class="donation-options">
+        <!-- Group the first three buttons in a row -->
+        <div class="amount-row">
+          <button>$25 <span>USD</span></button>
+          <button>$50 <span>USD</span></button>
+          <button>$100 <span>USD</span></button>
         </div>
+        <!-- Custom button stays below -->
+        <button class="custom">or choose a custom amount to give</button>
+      </div>
+
+      <!-- Payment Methods -->
+      <div class="payment-methods">
+        <!-- PayPal button with image -->
+        <button class="paypal">
+          <img src="img/pay.png" alt="Pay with PayPal" style="height:24px;">
+        </button>
+        <!-- Apple Pay button with image -->
+        <button class="applepay">
+          <img src="img/app.png" alt="Pay with Apple Pay" style="height:24px;">
+        </button>
+      </div>
+
+      <!-- Impact Button -->
+      <button class="impact-btn">SEE YOUR IMPACT</button>
+
+      <!-- Testimonial -->
+      <blockquote>
+        “I donated $10 and a month later got photos of the well I helped build. Felt like I was really part of it.”
+        <footer>&mdash; Jordan, Student & Monthly Donor</footer>
+      </blockquote>
+      <p class="subtext">Over 41,000 people received water this month because of donations like yours.</p>
     </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
+    <!-- Hero Image + Slogan -->
+    <section class="image-section">
+      <!-- Moved the heading before the image for easier positioning -->
+      <h1>Give Clean Water.<br>See Real Change.</h1>
+      <img src="img/Madagascar_2019.jpg" alt="Children smiling on water containers" />
     </section>
+  </main>
 </body>
 </html>

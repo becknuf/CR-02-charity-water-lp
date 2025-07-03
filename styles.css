@@ -22,177 +22,231 @@ Fonts:
   Charity: Water Landing Page Styles
   This CSS uses the provided color palette and beginner-friendly styles.
 */
-
-/* Set up the main font and background color for the whole page */
-body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+/* Reset some default styles */
+body, h1, h3, button, blockquote {
   margin: 0;
   padding: 0;
-  color: #222;
+  /* Use only Proxima Nova for all text */
+  font-family: 'Proxima Nova', sans-serif;
 }
 
-/* Add a slight shadow and rounded corners to each section for depth */
-section {
-  background: #fff; /* White background for sections */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
-  margin: 24px 10px; /* Space between sections */
-  padding: 24px 16px;
+body {
+  background-color: #8bd1cb; /* Light gray background */
+  color: #333;
+  /* Use only Proxima Nova for all text */
+  font-family: 'Proxima Nova', sans-serif;
 }
 
-/* Hero Section Styles */
-.hero {
-  position: relative; /* Needed for overlay */
-  /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
-  background-size: cover;      /* Make the image cover the whole area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;
-  color: #fff;                 /* White text for contrast */
-  text-align: center;          /* Center the text */
-  padding: 60px 20px;          /* Add space above and below */
-  border-radius: 0 0 16px 16px; /* Only round bottom corners */
-
-  /* Add a dark overlay for better text readability */
-  /* This uses a simple linear-gradient overlay */
-  background-blend-mode: darken;
-  background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
+header {
+  background-color: #8bd1cb;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  /* Remove justify-content: space-between to keep logo and nav together */
 }
 
-/* Make the headline bold and modern */
-.hero h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
+h3 {
+  font-size: 24px; /* Increase heading size */
+  color: #4a5a6a; /* Dark gray color for headings */
+  margin-bottom: 20px; /* Add space below headings */
 }
 
-/* Style the subheadline */
-.hero p {
-  font-size: 1.2em;
-  margin-top: 0;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+/* Group logo and nav together in a row */
+.logo {
+  display: flex;
+  align-items: center; /* Align logo image and nav vertically */
+  /* Remove font-weight and font-size since logo is now an image */
+  margin-bottom: 0;
+  margin-top: 5px;
 }
 
-/* Story Section Styles */
-.story {
-  background-color: #8BD1CB; /* Secondary Light Blue */
-  color: #222;
-  text-align: center;
-  padding: 30px 20px;
+/* Place nav right next to the logo image */
+header nav {
+  display: flex;
+  align-items: center;
+  margin-left: 16px; /* Add space between logo image and nav links */
 }
 
-/* Add accent color to section headings */
-h2 {
-  color: #2E9DF7; /* Primary blue */
-  margin-top: 0;
-  font-weight: bold;
-}
-
-/* Call-to-Action Section Styles */
-.call-to-action {
-  background-color: #FFC907; /* Primary Yellow */
-  color: #222;
-  text-align: center;
-  padding: 30px 20px;
-}
-
-/* Style the impact story image */
-.impact-image {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
-}
-
-/* Donate Button Styles */
-.donate-button {
-  display: inline-block;
-  background-color: #4FCB53; /* Green */
-  color: #fff;
-  padding: 14px 32px;
+nav a {
+  margin: 0 10px;
+  color: #4a5a6a;
   text-decoration: none;
-  border-radius: 6px;
   font-weight: bold;
-  font-size: 1.1em;
-  margin-top: 18px;
-  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
-  transition: background 0.3s, transform 0.2s;
+}
+
+.give-btn {
+  margin-left: auto; /* Push the button to the right */
+  background-color: #ffc907;
+  padding: 10px 20px;
   border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0; /* No padding */
+  background-color: #fff;
+}
+
+.donate {
+  flex: 1;
+  max-width: 400px;
+  margin-right: 20px;
+}
+
+/* Style the row of amount buttons to be side by side */
+.amount-row {
+  display: flex; /* Place buttons in a row */
+  gap: 1px;      /* 1px space between buttons */
+  margin-bottom: 10px; /* Space below the row for the custom button */
+}
+
+/* Make the amount buttons share the space equally */
+.amount-row button {
+  flex: 1; /* Each button takes equal width */
+  margin: 0; /* Remove extra margin */
+  border-radius: 10px; /* Rounded corners for all buttons */
+}
+
+.donation-options button {
+  display: block;
+  background-color: #2e9df7;
+  color: white;
+  padding: 12px;
+  margin: 0;
+  border: none;
+  border-radius: 10px; /* Rounded corners for all donation buttons */
+  width: 100%;
+  font-size: 16px;
+}
+
+.donation-options .custom {
+  background-color: #a8d8e5;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/* Payment method buttons styles */
+.payment-methods {
+  display: flex;           /* Place buttons side by side */
+  gap: 6px;               /* Space between the buttons */
+  margin-top: 5px;
+}
+
+.payment-methods button {
+  /* Make buttons fill available space and look even */
+  flex: 1;                 /* Each button takes equal width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;         /* More padding for bigger buttons */
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  background: none;        /* Remove default background, set below for each type */
+  margin: 0;               /* Remove extra margin */
+  min-width: 0;            /* Prevent overflow */
+}
+
+/* PayPal button background */
+.paypal {
+  background-color: #ffc439;
+}
+
+/* Apple Pay button background */
+.applepay {
+  background-color: #000;
+}
+
+/* Make images bigger and centered in the buttons */
+.payment-methods button img {
+  height: 70px;      /* Make the image taller for better readability */
+  max-width: 90%;    /* Image can grow wider if needed, but not overflow */
+  width: auto;
+  display: block;
+}
+
+.impact-btn {
+  margin-top: 20px;
+  background-color: #ffd33d;
+  padding: 12px;
+  border: none;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-/* Change button color when hovered */
-.donate-button:hover {
-  background-color: #159A48; /* Dark Green */
-  transform: translateY(-2px) scale(1.04); /* Slight lift */
+blockquote {
+  margin: 20px auto;              /* Center the blockquote horizontally */
+  background-color: #fff7e1;
+  padding: 15px 25px;             /* More horizontal padding for a skinnier look */
+  font-style: italic;
+  font-size: 20px;                /* Increase text size */
+  border-radius: 18px;            /* Rounded corners */
+  max-width: 340px;               /* Make the box skinnier */
+  text-align: center;             /* Center the text inside */
+  box-sizing: border-box;         /* Include padding in width */
 }
 
-/* Add some spacing between sections */
-section {
-  margin-bottom: 20px;
+.subtext {
+  font-size: 14px;
+  color: #666;
 }
 
-/* 
-  Media Queries for Responsive Design
-  Media queries help make your website look good on different screen sizes,
-  like phones (small screens) and computers (large screens).
-*/
-
-/* This media query applies styles when the screen is 600px wide or less (like on most phones) */
-@media (max-width: 600px) {
-  /* Make hero section padding smaller on small screens */
-  .hero {
-    padding: 32px 8px;
-    font-size: 1em;
-  }
-
-  /* Make headline font size smaller so it fits on small screens */
-  .hero h1 {
-    font-size: 1.4em;
-  }
-
-  /* Make subheadline font size smaller */
-  .hero p {
-    font-size: 1em;
-  }
-
-  /* Make story and call-to-action sections have less padding */
-  .story,
-  .call-to-action,
-  .donation-section {
-    padding: 14px 8px;
-  }
-
-  /* Make impact story image smaller and stack above the text */
-  .impact-content {
-    display: block; /* Stack items vertically */
-    text-align: center;
-  }
-
-  .impact-image {
-    width: 90%;    /* Make image take up most of the width */
-    max-width: 220px;
-  }
+/* Make the image-section fill the height of the page */
+.image-section {
+  flex: 1;
+  text-align: center;
+  position: relative; /* Needed for absolute positioning of h1 */
+  padding: 0;         /* Remove any padding */
+  margin: 0;          /* Remove any margin */
+  height: 100vh;      /* Make section fill the viewport height */
+  min-height: 100vh;  /* Ensure it always fills the screen */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-/* This media query applies styles when the screen is wider than 600px (like on tablets and computers) */
-@media (min-width: 601px) {
-  /* Show image and text side by side in the impact story */
-  .impact-content {
-    display: flex;           /* Place items in a row */
-    align-items: center;     /* Vertically center items */
-    justify-content: center; /* Center the whole group */
-    gap: 28px;               /* Space between image and text */
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
-  }
+/* Style the image to fill the section and touch all edges */
+.image-section img {
+  width: 100%;
+  height: 100vh;      /* Make image fill the section vertically */
+  object-fit: cover;  /* Cover the area, cropping if needed */
+  border-radius: 0;   /* No rounded corners */
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
 
-  .impact-image {
-    width: 300px;
-  }
+/* Move the heading to the top right corner of the image */
+.image-section h1 {
+  /* Position the heading absolutely inside the image-section */
+  position: absolute;
+  /* Place it in the top right corner with some space from the edges */
+  top: 20px;
+  right: 20px;
+  z-index: 2; /* Place above the image */
+  /* Set text color for good contrast */
+  color: #f8e71c;
+  font-size: 32px;
+  font-weight: bold;
+  /* Add a subtle shadow for readability */
+  text-shadow: 1px 1px 4px #333;
+  /* Align text to the right */
+  text-align: right;
+  /* Add some background for better readability on the image */
+  background: rgba(0,0,0,0.2);
+  padding: 10px 16px;
+  border-radius: 6px;
 }
