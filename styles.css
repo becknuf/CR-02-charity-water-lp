@@ -48,7 +48,7 @@ header {
 h3 {
   font-size: 24px; /* Increase heading size */
   color: #4a5a6a; /* Dark gray color for headings */
-  margin-bottom: 20px; /* Add space below headings */
+  margin: 15px; /* Add space below headings */
 }
 
 /* Group logo and nav together in a row */
@@ -94,7 +94,8 @@ nav a {
 .donate {
   flex: 1;
   max-width: 400px;
-  margin-right: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 /* Style the row of amount buttons to be side by side */
@@ -124,7 +125,8 @@ nav a {
 }
 
 .donation-options .custom {
-  background-color: #a8d8e5;
+  /* Make the custom button the same color as the other amount buttons */
+  background-color: #2e9df7;
   margin-top: 10px;
   border-radius: 10px;
 }
@@ -142,10 +144,10 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 0;         /* More padding for bigger buttons */
+  padding: 10px 0;         /* More padding for bigger buttons */
   border: none;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 24px; /* More rounded corners for the buttons */
   background: none;        /* Remove default background, set below for each type */
   margin: 0;               /* Remove extra margin */
   min-width: 0;            /* Prevent overflow */
@@ -161,16 +163,15 @@ nav a {
   background-color: #000;
 }
 
-/* Make images bigger and centered in the buttons */
+/* Make images bigger, centered, and always the same size */
 .payment-methods button img {
-  height: 70px;      /* Make the image taller for better readability */
-  max-width: 90%;    /* Image can grow wider if needed, but not overflow */
-  width: auto;
+  width: 200px;      /* Fixed width for all images */
+  height: 140px;     /* Fixed height for all images */
   display: block;
 }
 
 .impact-btn {
-  margin-top: 20px;
+  margin-top: 10px;
   background-color: #ffd33d;
   padding: 12px;
   border: none;
