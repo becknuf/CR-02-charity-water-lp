@@ -40,6 +40,7 @@ body {
 header {
   background-color: #8bd1cb;
   padding: 15px 30px;
+  border-bottom: 2px solid #000;
   display: flex;
   align-items: center; /* Align items vertically in the center */
   /* Remove justify-content: space-between to keep logo and nav together */
@@ -49,6 +50,7 @@ h3 {
   font-size: 24px; /* Increase heading size */
   color: #4a5a6a; /* Dark gray color for headings */
   margin: 15px; /* Add space below headings */
+  border-bottom: 1px dashed #000;
 }
 
 /* Group logo and nav together in a row */
@@ -76,7 +78,7 @@ nav a {
 
 .give-btn {
   margin-left: auto; /* Push the button to the right */
-  background-color: #ffc907;
+  background-color: #ffc907; 
   padding: 10px 20px;
   border: none;
   font-weight: bold;
@@ -88,7 +90,7 @@ nav a {
   display: flex;
   flex-wrap: wrap;
   padding: 0; /* No padding */
-  background-color: #fff;
+  background-color: #cbccd1;
 }
 
 .donate {
@@ -96,6 +98,7 @@ nav a {
   max-width: 400px;
   margin-right: 5px;
   margin-left: 5px;
+  background-color: #cbccd1;
 }
 
 /* Style the row of amount buttons to be side by side */
@@ -116,7 +119,8 @@ nav a {
   display: block;
   background-color: #2e9df7;
   color: white;
-  padding: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin: 0;
   border: none;
   border-radius: 10px; /* Rounded corners for all donation buttons */
@@ -144,7 +148,7 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 0;         /* More padding for bigger buttons */
+  padding: 10px 0;               /* More padding for bigger buttons */
   border: none;
   cursor: pointer;
   border-radius: 24px; /* More rounded corners for the buttons */
@@ -173,18 +177,20 @@ nav a {
 .impact-btn {
   margin-top: 10px;
   background-color: #ffd33d;
-  padding: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border: none;
   font-weight: bold;
   width: 100%;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 18px
 }
 
 blockquote {
   margin: 20px auto;              /* Center the blockquote horizontally */
   background-color: #fff7e1;
-  padding: 15px 25px;             /* More horizontal padding for a skinnier look */
+  padding: 25px 20px;             /* More horizontal padding for a skinnier look */
   font-style: italic;
   font-size: 20px;                /* Increase text size */
   border-radius: 18px;            /* Rounded corners */
@@ -193,9 +199,12 @@ blockquote {
   box-sizing: border-box;         /* Include padding in width */
 }
 
+footer {
+  font-size: 16px;
+}
 .subtext {
-  font-size: 14px;
-  color: #666;
+  font-size: 18px;
+  color: #4a5a6a;
 }
 
 /* Make the image-section fill the height of the page */
@@ -228,6 +237,7 @@ blockquote {
   left: 0;
   bottom: 0;
   z-index: 1;
+  border-left: 1px solid #000;
 }
 
 /* Move the heading to the top right corner of the image */
@@ -240,7 +250,7 @@ blockquote {
   z-index: 2; /* Place above the image */
   /* Set text color for good contrast */
   color: #f8e71c;
-  font-size: 32px;
+  font-size: 40px;
   font-weight: bold;
   /* Add a subtle shadow for readability */
   text-shadow: 1px 1px 4px #333;
@@ -250,4 +260,11 @@ blockquote {
   background: rgba(0,0,0,0.2);
   padding: 10px 16px;
   border-radius: 6px;
+}
+
+.donate-intro {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 18px;
+  text-align: center;
 }
