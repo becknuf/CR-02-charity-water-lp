@@ -23,7 +23,7 @@ Fonts:
   This CSS uses the provided color palette and beginner-friendly styles.
 */
 /* Reset some default styles */
-body, h1, h3, button, blockquote {
+body, h1, h3, button, blockquote, .donate-intro, .subtext, footer {
   margin: 0;
   padding: 0;
   /* Use only Proxima Nova for all text */
@@ -270,4 +270,89 @@ footer {
   color: #333;
   margin-bottom: 18px;
   text-align: center;
+}
+
+/* --- Responsive Styles for Tablets and Phones --- */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column; /* Stack sections vertically */
+  }
+  .donate, .image-section {
+    max-width: 100%;
+    margin: 0;
+  }
+  .image-section {
+    height: 50vh; /* Make image section shorter on small screens */
+    min-height: 250px;
+  }
+  .image-section img {
+    height: 50vh;
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 8px;
+  }
+  .logo {
+    margin-bottom: 8px;
+  }
+  nav {
+    margin: 8px 0;
+  }
+  .give-btn {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 8px;
+  }
+  .hero {
+    padding: 0;
+  }
+  .donate {
+    padding: 10px 0;
+    max-width: 100%;
+    margin: 0;
+    background: #cbccd1;
+  }
+  .donate-intro, .subtext {
+    font-size: 16px;
+    padding: 0 8px;
+  }
+  .amount-row button,
+  .donation-options button,
+  .impact-btn {
+    font-size: 15px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .payment-methods {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .payment-methods button img {
+    width: 120px;
+    height: 50px;
+  }
+  .image-section {
+    height: 200px;
+    min-height: 120px;
+  }
+  .image-section img {
+    height: 200px;
+    min-height: 120px;
+  }
+  .image-section h1 {
+    font-size: 22px;
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+  }
+  blockquote {
+    font-size: 16px;
+    padding: 16px 8px;
+    max-width: 95vw;
+  }
 }
